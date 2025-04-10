@@ -1,0 +1,13 @@
+[
+  {"name": "Chocolate Chip Cookie", "price": 1, "quantity": 1, "calories": 169, "soldOut": false},
+  {"name": "Double Chocolate Chip Cookie", "price": 1, "quantity": 1, "calories": 173, "soldOut": false},
+  {"name": "Strawberry n Creme Cookie", "price": 1, "quantity": 1, "calories": 152, "soldOut": false},
+  {"name": "Cookies n Creme Cookie", "price": 1, "quantity": 1, "calories": 187, "soldOut": false},
+  {"name": "Brookie", "price": 2, "quantity": 2, "calories": 198, "soldOut": false},
+  {"name": "Brownie - Small", "price": 1, "quantity": 1, "calories": 210, "soldOut": false},
+  {"name": "Brownie - Large", "price": 2, "quantity": 1, "calories": 216, "soldOut": false},
+  {"name": "Smores Cookie", "price": 1, "quantity": 1, "calories": 167, "soldOut": false},
+  {"name": "Cinnamon Roll", "price": 2, "quantity": 2, "calories": 194, "soldOut": false},
+  {"name": "Muffin", "price": 1, "quantity": 1, "calories": 151, "soldOut": false},
+  {"name": "Powdered Donut", "price": 1, "quantity": 1, "calories": 178, "soldOut": false}
+]

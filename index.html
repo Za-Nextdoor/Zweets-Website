@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zweets | Home</title>
+  <style>
+    :root {
+      --orange: #f39641;
+      --brown: #93511c;
+      --blue-gray: #91aca9;
+      --gold: #ce9123;
+      --caramel: #c78650;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--blue-gray);
+      color: var(--brown);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    h1 {
+      font-size: 3em;
+      color: var(--orange);
+    }
+    p {
+      font-size: 1.2em;
+      max-width: 500px;
+      text-align: center;
+    }
+    .menu-btn {
+      margin-top: 20px;
+      padding: 15px 30px;
+      background-color: var(--caramel);
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1.1em;
+      cursor: pointer;
+    }
+    .menu-btn:hover {
+      background-color: var(--gold);
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Zweets</h1>
+  <p>Your one-stop shop for cozy, delicious, and handmade sweets. Ready to see what we've baked up for you today?</p>
+  <button class="menu-btn" onclick="window.location.href='menu.html'">View Menu</button>
+</body>
+</html>

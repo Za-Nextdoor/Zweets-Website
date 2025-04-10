@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zweets | Menu</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #91aca9;
+      margin: 0;
+      padding: 20px;
+      color: #93511c;
+    }
+    h1 {
+      text-align: center;
+      color: #f39641;
+    }
+    .menu-item {
+      background-color: #fefefe;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 10px auto;
+      max-width: 500px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+    .details {
+      display: none;
+      margin-top: 10px;
+      font-size: 0.95em;
+    }
+    .sold-out {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Zweets Menu</h1>
+  <div id="menu-container"></div>
+  <script>
+    fetch('menu.json')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('menu-container');
+        data.forEach(item => {
+          const itemDiv = document.createElement('div');
+          itemDiv.className = 'menu-item';
+          const name = document.createElement('h3');
+          name.textContent = item.name;
+          const details = document.createElement('div');
+          details.className = 'details';
+          details.innerHTML = `
+            <p><strong>Price:</strong> $${item.price}</p>
+            <p><strong>Quantity:</strong> ${item.quantity} per pack</p>
+            <p><strong>Calories:</strong> ${item.calories}</p>
+            <p class="${item.soldOut ? 'sold-out' : ''}">
+              ${item.soldOut ? 'Sold Out' : 'Available'}
+            </p>
+          `;
+          itemDiv.appendChild(name);
+          itemDiv.appendChild(details);
+          itemDiv.addEventListener('click', () => {
+            details.style.display = details.style.display === 'none' ? 'block' : 'none';
+          });
+          container.appendChild(itemDiv);
+        });
+      });
+  </script>
+</body>
+</html>
